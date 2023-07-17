@@ -38,11 +38,12 @@ header {
     justify-content: space-between;
     padding: 30px 170px;
     background: var(--bg-color);
+    box-shadow: 0 1px 0px 0 rgb(255, 255, 255);
 }
 .logo {
     color: var(--main-color);
     font-weight: 600;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
 }
 .navbar {
     display: flex;
@@ -75,11 +76,13 @@ section {
 }
 .home-img img{
     max-width: 100%;
-    width: 600px;
-    height: auto;
+    width: 450px;
+    height: 500px;
+    border-radius: 30px;
+    
 }
 .home-text h1{
-    font-size: var(--big-font);
+    font-size: 40px;
     color: var(--main-color);
 
 }
@@ -101,17 +104,22 @@ section {
 .about  {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    grid-gap: 1.5rem;
+    grid-gap: 3.5rem;
     align-items: center;
 }
 .about-img img {
     max-width: 100%;
-    width: 480px;
+    width: 680px;
     height: auto;
+    border-radius: 120px;
+    padding: 70px;
+    
+    
 }
 .about-text span{
     color: var(--main-color);
     font-weight: 600;
+    font-size: 40px;
 
 }
 .about-text h2 {
@@ -128,6 +136,7 @@ section {
 .heading span {
     color: var(--main-color);
     font-weight: 600;
+    font-size: 40px;
 }
 .heading h2{
     font-size: var(--h2-font);
@@ -146,17 +155,38 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #feeee7;
+    background: rgb(236, 245, 232);
     padding: 20px;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+    
+    
 }
+
+.box:hover {
+    transform: scaleY(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+hr.linija {
+    border: 1.5px dashed white;
+    
+}
+
 .box-img {
-    width: 220px;
+    width: 80%;
     height: 220px;
+    
+
+    
 }
+
 .box-img img {
     width: 100%;
     height: 100%;
+    border-radius: 50px;
+    
+    
 }
 .box h2{
     font-size: 1.3rem;
@@ -181,7 +211,13 @@ section {
     font-size: 20px;
     padding: 7px 10px;
     border-radius: 0 0.5rem 0 0.5rem;
+    cursor: pointer;
 }
+.box .bx:hover {
+    transition: 0.3s;
+    background: rgb(173, 114, 3);
+}
+
 .service-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, auto));
@@ -210,6 +246,13 @@ section {
     width: 66%;
     margin: 100px auto;
     border-radius: 10px;
+    position: relative;
+    
+}
+.cta img {
+    width: 1050px;
+    height: 250px;
+    display: flex;
 }
 .cta h2 {
     font-size: 2rem;
@@ -279,6 +322,7 @@ section {
     background: var(--text-color);
 }
 
+
 @media (max-width: 1560px) {
     header{
         padding: 15px 40px;
@@ -287,12 +331,16 @@ section {
         --big-font:3.5rem;
         --h2-font:2rem;
     }
+    .about-img {
+        padding: 0px;
+    }
 }
 
 @media (max-width: 1140px) {
     section {
         padding: 50px 8%;
     }
+    
     #menu-icon {
         display: initial;
         color: var(--text-color);
@@ -307,6 +355,7 @@ section {
         text-align: center;
         background: #2b2640;
         transition: .3s;
+        
     }
     header .navbar.active {
         top: 70px;
@@ -326,23 +375,336 @@ section {
         padding: 10px 16px;
     }
     .home {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
         text-align: center;
     }
+    
     .about {
         grid-template-columns: 1fr;
         text-align: center;
     }
     .about-img {
-        order: 2;
+        order: 5;
+        padding: 0px;
     }
     section{
         padding: 100px 7%;
     }
+    .home-img img{
+        max-width: 100%;
+        width: 350px;
+        height: 400px;
+        border-radius: 30px;
+        
+    }
 }
+@media (max-width: 465px) {
+    .about-img {
+     order: 2;
+        
+    }
+    .about-img img {
+        max-width: 100%;
+        width: 680px;
+        height: 350px;
+        border-radius: 70px;
+        padding: 30px;
+        
+        
+    }
 
+    .bg-gradient-green {
+        padding: 16px 0px;
+        text-align: center;
+        width: 100%;
+        border-radius: 10px;
+        background-image: linear-gradient(90deg,#ff7300 70%,#5e3005);
+        
+        
+        
+      }
+      
+      
+      .bg-gradient-green h1 {
+             font-size: 20px;
+             font-weight: 300;
+      }
+    
+      .poziv {
+        text-align: center;
+      }
+      .fa-solid {
+        font-size: 35px;
+        color: var(--main-color);
+      }
+      .mail {
+        text-align: center;
+        color: var(--main-color);
+      }
+      .contact-info p {
+        font-size: 25px;
+        text-align: center;
+      }
+      
+      .contact-info .number {
+        font-size: 30px;
+        text-align: center;
+      }
+    
+      .fa-regular {
+        
+        font-size: 35px;
+      }
+    
+      .contact-info .numberr a{
+        font-size: 20px;
+        text-align: center;
+            
+      }
+      .home-img img{
+        max-width: 100%;
+        width: 250px;
+        height: 300px;
+        border-radius: 30px;
+        
+    }
+    .lang {
+        margin: 10px;
+    }
+
+}
 @media (max-width: 575px) {
     .col{
         width: 100%;
     }
+   
+}
+
+
+/* slide show */
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+
+
+  /* Contact */
+
+  .bg-gradient-green {
+    padding: 16px 0px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg,#ff7300 70%,#5e3005);
+    
+    
+    
+  }
+  
+  
+  .bg-gradient-green p {
+         font-size: 25px;
+         font-weight: 600;
+  }
+
+  .poziv {
+    text-align: center;
+  }
+  .fa-solid {
+    font-size: 35px;
+    color: var(--main-color);
+  }
+  .mail {
+    text-align: center;
+    color: var(--main-color);
+  }
+  .contact-info p {
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .contact-info .number {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .fa-regular {
+    
+    font-size: 35px;
+  }
+
+  .contact-info .numberr {
+    font-size: 25px;
+    text-align: center;
+        
+  }
+
+  /* pokusaj 2 */
+
+  .mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.galerija {
+    color: var(--main-color);
+    text-align: center;
+}
+.galerija-text {
+    text-align: center;
+    font-size: 20px;
+}
+.lang {
+    text-align: center;
+    
+    
+    
+}
+.lang img{
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+
+}
+.lang p {
+    margin: 0px -9px;
 }
